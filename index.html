@@ -48,7 +48,7 @@ layout: landing-page
 			</section>
 			
 		<!-- Two -->
-			<section id="two" class="wrapper style2">
+			<!-- <section id="two" class="wrapper style2">
 				<header class="major">
 					<h2>RIDE REPORTS</h2>
 					<p>First hand accounts from riders on the Julian Bikepacking Challenge loops</p>
@@ -77,38 +77,56 @@ layout: landing-page
 						</div>
 					</div>
 				</div>
+			</section> -->
+			<section id="two" class="wrapper style2">
+				<div class="container">
+					<div class="row">
+						<div class="8u">
+							<section>
+								<h2>RACING THE JULIAN BIKEPACKING CHALLENGE BEACH LOOP</h2>
+								<a href="#" class="image fit"><img src="images/sw-beach.jpg" alt="" /></a>
+								<p>I started this race not knowing exactly how I would feel for I just started a new diet a month or so before. Early on in the ride I somewhat lethargically was searching for a little energy and was wondering if the new diet that worked so well for me during training might not really been the best choice for longer endurance racing? Boy, did that thought change quickly! After the first hour I felt rather amazing and was surprised by how effortlessly I was moving along. Before I knew it I was already 51 miles into the ride, still feeling great...</p>
+								<ul class="actions">
+									<li><a href="http://sbrcycling.weebly.com/sbr-cycling-adventure-page/racing-the-julian-bikepacking-challenge-beach-loop" class="button alt">Read More</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="4u">
+							<h2>LATEST BLOG POSTS</h2>
+							{% for post in site.posts limit: 2 %}
+							<section class="special ">
+								<h3>{{ post.title }}</h3>
+								{{ post.content | strip_html | truncatewords: 40 }}
+								<br /><br />
+								<ul class="actions">
+									<li><a href="{{ post.url }}" class="button alt">Read More</a></li>
+								</ul>
+							</section>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
 			</section>
 
 		<!-- Three -->
 			<!-- <section id="three" class="wrapper style1">
 				<div class="container">
+					<header class="major">
+						<h2>LATEST BLOG POSTS</h2>
+					</header>
 					<div class="row">
-						<div class="8u">
-							<section>
-								<h2>Mollis ut adipiscing</h2>
-								<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-								<p>Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan sapien blandit ac amet faucibus aliquet placerat commodo. Interdum ante aliquet commodo accumsan vis phasellus adipiscing. Ornare a in lacinia. Vestibulum accumsan ac metus massa tempor. Accumsan in lacinia ornare massa amet. Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan commodo odio cubilia ac eu interdum placerat placerat arcu commodo lobortis adipiscing semper ornare pellentesque.</p>
-							</section>
-						</div>
+						{% for post in site.posts limit: 3 %}
 						<div class="4u">
-							<section>
-								<h3>Magna massa blandit</h3>
-								<p>Feugiat amet accumsan ante aliquet feugiat accumsan. Ante blandit accumsan eu amet tortor non lorem felis semper. Interdum adipiscing orci feugiat penatibus adipiscing col cubilia lorem ipsum dolor sit amet feugiat consequat.</p>
+							<section class="special box">
+								<h3>{{ post.title }}</h3>
+								{{ post.content | strip_html | truncatewords: 50 }}
+								<br /><br />
 								<ul class="actions">
-									<li><a href="#" class="button alt">Learn More</a></li>
-								</ul>
-							</section>
-							<hr />
-							<section>
-								<h3>Ante sed commodo</h3>
-								<ul class="alt">
-									<li><a href="#">Erat blandit risus vis adipiscing</a></li>
-									<li><a href="#">Tempus ultricies faucibus amet</a></li>
-									<li><a href="#">Arcu commodo non adipiscing quis</a></li>
-									<li><a href="#">Accumsan vis lacinia semper</a></li>
+									<li><a href="{{ post.url }}" class="button alt">Read More</a></li>
 								</ul>
 							</section>
 						</div>
+						{% endfor %}
 					</div>
 				</div>
 			</section> -->
