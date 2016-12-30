@@ -1,0 +1,14 @@
+# Site settings
+title: JBPC
+email: admin@julianbikepackchallenge.com
+description: > # this means to ignore newlines until "baseurl:"
+  A three loop bikepacking adventure showcasing San Diego County's diverse regions,
+  climate and finest riding. The Beach, Mountain & Desert loops all start and end in Julian, California,
+  the historic gold-mining town in the Cuyamuca Mountains, also famous for apple pies.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://julianbikepackchallenge.com" # the base hostname & protocol for your site
+twitter_username: 
+github_username:  
+
+# Build settings
+markdown: kramdown
