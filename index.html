@@ -21,7 +21,6 @@ layout: landing-page
 						<div class="4u">
 							<section class="special box">
 								<img src="images/palm-icon.png" />
-								<!-- <i class="icon fa-area-chart major"></i> -->
 								<h3>Beach Loop</h3>
 								<p>Follows the Coast to Crest trail from Julian down to the Pacific Ocean before returning via Ramona. Singletrack, dirt & some asphalt roads. 170 miles 12,000+ feet of gain</p>
 								<ul class="actions">
@@ -32,7 +31,6 @@ layout: landing-page
 						<div class="4u">
 							<section class="special box">
 								<img src="images/cactus-icon.png" />
-								<!-- <i class="icon fa-refresh major"></i> -->
 								<h3>Desert Loop</h3>
 								<p>Drops down into the Anza-Borrego Desert State Park looping through Borrego Springs. Rocky singletrack, sand washes & some asphalt. 110 miles 12,000+ feet of gain</p>
 								<ul class="actions">
@@ -43,7 +41,6 @@ layout: landing-page
 						<div class="4u">
 							<section class="special box">
 								<img src="images/pine-icon.png" />
-								<!-- <i class="icon fa-tree major"></i> -->
 								<h3>Mountain Loop</h3>
 								<p>The most technical loop heads south into the Cuyamaca Rancho State Park via Pine Valley looping through the Corral Canyon OHV area. Singletrack, technical trails, dirt & some asphalt roads. 160 miles 20,000+ feet of gain</p>
 								<ul class="actions">
@@ -107,7 +104,7 @@ layout: landing-page
 								{{ post.content | strip_html | truncatewords: 40 }}
 								<br /><br />
 								<ul class="actions">
-									<li><a href="{{ post.url }}" class="button alt">Read More</a></li>
+									<li><a href="{{ site.baseurl }}{{ post.url }}" class="button alt">Read More</a></li>
 								</ul>
 							</section>
 							{% endfor %}
