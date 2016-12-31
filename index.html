@@ -4,10 +4,12 @@ layout: landing-page
 
 		<!-- One -->
 			<section id="one" class="wrapper style1">
-				<!-- <header class="major">
-					<h2>What to expect</h2>
-					<p>Tempus adipiscing commodo ut aliquam blandit</p>
-				</header> -->
+				<header class="major">
+					<h2>LATEST NEWS</h2>
+					{% for news in site.news limit: 2 %}
+					<p><span style="color: #629DD1;">{{ news.content | strip_html }}</span></p>
+					{% endfor %}
+				</header>
 				<div class="container">
 					<div class="row">
 						<div class="4u">
