@@ -28,8 +28,23 @@
                 </div>
             </div>
             <div class="6u">
-                <h2>Disclaimer</h2>
-                <p style="font-size:70%;line-height:20px;">The content of this website is purely for informational purposes and is intended as a reference guide.  The authors and everyone involved in the creation of this website make no warranty of correctness or thoroughness and disclaim any and all liability from its use.Mountain biking is inherently dangerous and it's not wise to do this route alone. USE THIS INFORMATION AT YOUR OWN RISK. A spot tracker would be a smart device to have with you for emergency extraction.</p>
+                <div id="qformd">
+                <form id="gform" action="#" target="_self" method="POST" id="mG61Hd">
+                    <h3>Contact Us</h3>
+                    Email address <input type="email" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="email"tabindex="0" aria-label="Your email" name="emailAddress" value="" required dir="auto" data-initial-dir="auto" data-initial-value="" />
+                    Name <input type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"tabindex="0" aria-label="Name" aria-describedby="i.desc.1633920210 i.err.1633920210" name="entry.2005620554" value="" required dir="auto" data-initial-dir="auto" data-initial-value="" />
+                    Comments
+                    <textarea class="quantumWizTextinputPapertextareaInput exportTextarea" jsname="YPqjbf" rows="1" tabindex="0" aria-label="Comments" jscontroller="gZjhIf" jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" name="entry.839337160" dir="auto" data-initial-dir="auto" data-initial-value=""></textarea>
+                    <br />
+                    <input type="submit" value="Submit" />
+                    <input type="hidden" name="fvv" value="1">
+                    <input type="hidden" name="draftResponse" value="[,,&quot;-2847527482802321100&quot;]">
+                    <input type="hidden" name="pageHistory" value="0"><input type="hidden" name="fbzx" value="-2847527482802321100">
+                </form>
+            </div>
+
+                <!-- <h2>Disclaimer</h2>
+                <p style="font-size:70%;line-height:20px;">The content of this website is purely for informational purposes and is intended as a reference guide.  The authors and everyone involved in the creation of this website make no warranty of correctness or thoroughness and disclaim any and all liability from its use.Mountain biking is inherently dangerous and it's not wise to do this route alone. USE THIS INFORMATION AT YOUR OWN RISK. A spot tracker would be a smart device to have with you for emergency extraction.</p> -->
                 <ul class="icons">
                     <!-- <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li> -->
                     <li><a href="https://www.facebook.com/groups/1618140971756406/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
@@ -40,10 +55,32 @@
             </div>
         </div>
         <ul class="copyright">
-            <li>&copy; JBPC 2015. All rights reserved.</li>
-            <!-- <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-            <li>Images: <a href="http://unsplash.com">Unsplash</a></li>
-            <li>Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a></li> -->
+            <li>&copy; JBPC 2015 All rights reserved</li>
         </ul>
     </div>
 </footer>
+
+<script type="text/javascript">
+    $("#gform").submit(function(e) {
+
+        var url = "https://docs.google.com/forms/d/e/1FAIpQLSf-ruvmFu1DVukAmMFQdxu9iz9o_cvaOF6qLz6sUaDPRnW17A/formResponse"; // the script where you handle the form input.
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $('#gform').serialize(), // serializes the form's elements.
+        })
+        .always(function() {
+            // Clear form
+            $(':input','#gform')
+            .not(':button, :submit, :reset, :hidden')
+            .val('')
+            .removeAttr('checked')
+            .removeAttr('selected');
+            // Response
+            $('#qformd').html("<p>Thanks we'll get back to you</p>")
+        });
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+    });
+
+</script>
