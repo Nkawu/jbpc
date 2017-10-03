@@ -5,12 +5,12 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2017-10-03T18:13:42Z</time>
+    <time>2017-10-03T19:14:48Z</time>
     <bounds maxlat="33.257270995527506" maxlon="-116.285830987617373" minlat="32.847979981452227" minlon="-117.268652971833944"/>
   </metadata>
 
   <trk>
-    <name>JBPC BFL 2017-09-28</name>
+    <name>JBPC BFL 2017-09-28 10K</name>
     <extensions>
       <gpxx:TrackExtension>
         <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
