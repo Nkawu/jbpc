@@ -9,7 +9,7 @@ layout: landing-page
 						<div class="12u">
 							<section class="special box">
 								<h2>LATEST NEWS</h2>
-								{% for news in site.news limit: 2 %}
+								{% for news in site.news limit: 1 %}
 								<p><span style="color: #629DD1;">{{ news.content | strip_html }}</span></p>
 								{% endfor %}
 							</section>
