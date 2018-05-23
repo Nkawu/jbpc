@@ -37,13 +37,11 @@
             <div class="6u">
                 <h3>Contact Us</h3>
                 <div id="fsty"></div>
-                <form name="gform" id="gform" enctype="text/plain"target="hidden_iframe" onsubmit="submitted=true;">
+                <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSf-ruvmFu1DVukAmMFQdxu9iz9o_cvaOF6qLz6sUaDPRnW17A/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
                     Email address <span id="email-error" class="form-error"></span> <input type="email" autocomplete="email" tabindex="0" id="emailAddress" name="emailAddress" value="" required placeholder="Enter a valid email address" onchange="if(this.value != '') checkEmail();" />
-                    Name <input type="text" id="name" autocomplete="off" tabindex="0" value="" required />
+                    Name <input type="text" autocomplete="off" tabindex="0" name="entry.2005620554" value="" required />
                     Comments
-                    <textarea rows="2" tabindex="0" id="comments"></textarea>
-                    <br />
-                    <div class="g-recaptcha" data-sitekey="6LfixFoUAAAAAKiEkf3_iiMLsdU16SSOxQNc894f"></div>
+                    <textarea rows="2" tabindex="0" name="entry.839337160"></textarea>
                     <br />
                     <input id="form-submit" type="submit" value="Submit" disabled />
                 </form>
@@ -57,6 +55,13 @@
 </footer>
 
 <script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+    $('#gform').on('submit', function(e) {
+        $('#gform').fadeOut(2000);
+        $('#fsty').html("<p>Your submission has been processed</p>").fadeIn(1000);
+    });
+</script>
+
 <script type="text/javascript">
     checkEmail = function() {
         var email = $("#emailAddress").val();
