@@ -36,7 +36,7 @@
             'g-recaptcha-response': $("#g-recaptcha-response").val()
           }),
           success: function(data, status, jqxhr){
-            if(status == 200) {
+            if(data.statusCode == 200) {
               $('#gform').fadeOut(2000);
               $('#fsty').html("<p>Your submission has been processed</p>").fadeIn(1000);
             } else {
