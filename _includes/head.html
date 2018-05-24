@@ -40,8 +40,7 @@
               $('#gform').fadeOut(2000);
               $('#fsty').html("<p>Your submission has been processed</p>").fadeIn(1000);
             } else {
-              alert("fail");
-              $("#email-error").html(data.message);
+              $("#email-error").html("Failed to submit comment");
               $("#form-submit").attr('disabled','disabled');
             }
           },
