@@ -41,7 +41,7 @@
               $('#fsty').html("<p>Your submission has been processed</p>").fadeIn(1000);
             } else {
               $("#email-error").html("Failed to submit comment");
-              $("#form-submit").attr('disabled','disabled');
+              $("#form-submit").removeAttr('disabled');
             }
           },
           error: function(jqxhr, status, error){
