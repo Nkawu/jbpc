@@ -1,7 +1,7 @@
 <!--
-	Ion by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+  Ion by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <head>
 
@@ -22,6 +22,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $("#form-submit").click(function(e) {
+        $("#form-submit").attr('disabled','disabled');
         e.preventDefault();
         $.ajax({
           type: "POST",
@@ -35,12 +36,15 @@
             'g-recaptcha-response': $("#g-recaptcha-response").val()
           }),
           success: function(data, status, jqxhr){
-            console.log({success : status});
-            $('#gform').fadeOut(2000);
-            $('#fsty').html("<p>Your submission has been processed</p>").fadeIn(1000);
+            if(status == 200) {
+              $('#gform').fadeOut(2000);
+              $('#fsty').html("<p>Your submission has been processed</p>").fadeIn(1000);
+            } else {
+              $("#email-error").html(data.message);
+              $("#form-submit").attr('disabled','disabled');
+            }
           },
           error: function(jqxhr, status, error){
-            console.log({error : status, status : error});
             $("#email-error").html("Error submitting comment");
             $("#form-submit").attr('disabled','disabled');
           }
